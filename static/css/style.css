@@ -127,6 +127,26 @@ header{
     text-align: center;
 }
 
+#hmcb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.hmc-button{
+    color: black;
+    display: inline;
+    text-decoration: none;
+    background-color: #D1D5DB;
+    margin-top: 20px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
 @media (max-width: 1024px){
     #home-main-content{
         width: 650px;
