@@ -25,6 +25,9 @@ header{
 
 #navbar #logo h1{
     color: white;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 #navbar{
@@ -105,4 +108,39 @@ header{
     color: white;
     font-family: "Poppins", serif;
     font-weight: 600;
+}
+
+#hmc{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-main-content{
+    margin: 70px 0px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 1024px){
+    #home-main-content{
+        width: 650px;
+    }
+}
+
+@media (max-width: 768px){
+    #home-main-content{
+        width: 90%;
+    }
+}
+
+@media (max-width: 580px){
+    #home-main-content h1 span{
+        display: block;
+    }
 }

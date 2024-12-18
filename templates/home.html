@@ -1,32 +1,17 @@
-{% extends 'base.html' %} {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BLOG APP USING DJANGO</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-  </head>
-  <body>
-    {% block content %}
-    <div id="home-main-content">
-      <h1 class="hmc-txt">Welcome to <span>CYBER IMRAN</span></h1>
-      <h2 class="hmc-txt">Learn : <span id="element"></span></h2>
-      <p class="hmc-txt">
-        This platform is a reflection of my dedication to learning and sharing
-        knowledge, built with modern web development tools and techniques.
-      </p>
-    </div>
-    <script src="{% static 'js/script.js' %}"></script>
-    <script src="{% static 'js/typed.js' %}"></script>
-    <script>
-      var typed = new Typed('#element', {
-        strings: ["Python", "Java", "Django", "DSA", "AI", "Python"],
-        backDelay: 1400,
-        backSpeed: 50,
-        typeSpeed: 50,
-      });
-    </script>
-    {% endblock %}
-  </body>
-</html>
+{% extends 'base.html' %} {% block content %}
+
+<!-- Home Page Main Content -->
+<div id="hmc">
+  <div id="home-main-content">
+    <h1 class="hmc-txt">Welcome to <span>CYBER IMRAN</span></h1>
+    <h2 class="hmc-txt">Learn : <span id="element"></span></h2>
+    <p class="hmc-txt">
+      This platform is a testament to my unwavering dedication to learning,
+      growing, and sharing knowledge with the community. It has been crafted
+      with care using modern web development tools and techniques, showcasing my
+      commitment to staying updated with the latest trends and technologies.
+    </p>
+  </div>
+</div>
+
+{% endblock %}
