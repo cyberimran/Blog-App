@@ -85,6 +85,10 @@ header{
 
 /* Home Page Main Content Css */
 
+.typed-cursor{
+    color: white !important;
+}
+
 #home-main-content h1{
     color: white;
     font-family: "Poppins", serif;
@@ -162,5 +166,91 @@ header{
 @media (max-width: 580px){
     #home-main-content h1 span{
         display: block;
+    }
+}
+
+/* Home Page Blog Section Style */
+
+#home-blog-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid white;
+}
+
+#hbs{
+    width: 100%;
+}
+
+#hbs div:first-of-type{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid rgb(227, 29, 29);
+}
+
+#hbs h1:first-of-type{
+    color: #9333EA;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+#hbs div .blog-post{
+    width: 25%;
+    height: 300px;
+    border: 2px solid chartreuse;
+}
+
+#hbs div .blog-post:last-of-type{
+    display: none;
+}
+
+@media (max-width: 1024px){
+
+    #hbs div:first-of-type{
+        flex-wrap: wrap;
+    }
+
+    #hbs div .blog-post{
+        width: 35%;
+    }
+    
+    #hbs div .blog-post:last-of-type{
+        display: block;
+    }
+}
+
+@media (max-width: 768px){
+    #hbs div .blog-post{
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px){
+    #hbs div:first-of-type{
+        flex-direction: column;
+    }
+
+    #hbs div .blog-post{
+        width: 70%;
+    }
+
+    #hbs div .blog-post:last-of-type{
+        display: none;
+    }    
+}
+
+
+@media (max-width: 400px){
+    #hbs div:first-of-type{
+        flex-direction: column;
+    }
+
+    #hbs div .blog-post{
+        width: 83%;
     }
 }
