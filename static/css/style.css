@@ -1,3 +1,5 @@
+/* This css file for 'base.html' and 'home.html' */
+
 /* Google font */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -184,7 +186,6 @@ header{
 
 #hbs{
     width: 100%;
-    margin-bottom: 20px;
 }
 
 #hbs div:first-of-type{
@@ -192,6 +193,7 @@ header{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #hbs h1:first-of-type{
@@ -203,14 +205,11 @@ header{
 }
 
 #hbs div .blog-post{
-    width: 25%;
+    width: 25.01%;
     height: 320px;
     background-color: rgb(30, 39, 61);
     border-radius: 20px;
-}
-
-#hbs div .blog-post:last-of-type{
-    display: none;
+    margin-bottom: 50px;
 }
 
 
@@ -222,6 +221,7 @@ header{
     font-style: normal;
     cursor: pointer;
     padding: 5px 0px;
+    justify-content: space-evenly;
 }
 
 .blog-post img{
@@ -251,10 +251,11 @@ header{
         width: 35%;
         gap: 0;
         flex-wrap: nowrap;
+        margin-bottom: 0;
     }
     
-    #hbs div .blog-post:last-of-type{
-        display: block;
+    #blog-5, #blog-6{
+        display: none;
     }
 }
 
@@ -273,9 +274,9 @@ header{
         width: 70%;
     }
 
-    #hbs div .blog-post:last-of-type{
+    #blog-4, #blog-5, #blog-6{
         display: none;
-    }    
+    }
 }
 
 
@@ -292,5 +293,43 @@ header{
 @media (max-width:340px){
     #hbs div .blog-post{
         padding: 0 0;
+    }
+}
+
+/* Footer */
+
+footer{
+    margin-top: 0;
+    background-color: #1F2937;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+}
+
+footer div{
+    color: #E5E7EB;
+    width: 100%;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+footer div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div p{
+    color: #d4d4d4;
+    font-weight: 500;
+}
+
+@media (max-width:500px){
+    footer div{
+        padding: 0px 15px;
+        text-align: center;
+        font-size: 15px;
     }
 }
