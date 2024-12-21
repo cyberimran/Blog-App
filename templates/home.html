@@ -24,11 +24,20 @@
   <div id="hbs">
     <h1>Our Latest Blogs</h1>
     <div>
-      <div class="blog-post"></div>
-      <div class="blog-post"></div>
-      <div class="blog-post"></div>
-      <div class="blog-post"></div>
+      {% for blog in blogs %}
+          <div class="blog-post" onclick="goToBlog('http://127.0.0.1:8000/{{blog.slug}}/')">
+            <img src="media/{{blog.image}}" alt="">
+            <h2>{{blog.title}}</h2>
+            <p>{{blog.description}}</p>
+          </div>
+      {% endfor %}
     </div>
   </div>
 </div>
+
+<script>
+  function goToBlog(url) {
+      window.location.href = url;
+  }
+</script>
 {% endblock %}  

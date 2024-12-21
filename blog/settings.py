@@ -37,6 +37,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'ckeditor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -141,3 +142,28 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_DIR = {
     os.path.join(BASE_DIR, "public/static/"),
 }
+
+
+
+#for ck editor
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': '100%',
+        'extraPlugins': ','.join([
+            'justify',  # Text alignment
+            'image2',   # Enhanced image alignment
+        ]),
+        'removePlugins': 'image',  # Remove default image plugin
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'],
+            ['Image', 'Link', 'Unlink', 'Anchor'],
+            ['Undo', 'Redo', '-', 'Source'],
+        ],
+    }
+}
+
+# Email settings
