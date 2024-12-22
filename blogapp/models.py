@@ -11,7 +11,7 @@ class Category(models.Model):
         return self.name
 
 class BlogPost(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=45)
     description = models.TextField(max_length=70, default="No Description")
     category = models.ManyToManyField(Category, related_name="blogs")
     slug = models.CharField(unique=True, null=False, blank=False, max_length=150)
