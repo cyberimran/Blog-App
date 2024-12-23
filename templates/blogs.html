@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% block content %}
+
+<!-- Blog Section -->
+
+{% if searched != None %}
+<h2 id="searched" >Search results for <span>"{{ searched }}"</span></h2>
+{% endif %}
+
+<div id="blog-page">
+  {% if blogs|length == 0 %}
+  <p id="no-blogs">No blogs found.</p>
+  {% else %}
+    <div id="bp">
+      <div id="blog-container">
+        {% for blog in blogs %}
+            <div class="blog-post" onclick="goToBlog('http://127.0.0.1:8000/{{blog.slug}}/')">
+              <img src="http://127.0.0.1:8000/media/{{blog.image}}" alt="">
+              <h2>{{blog.title}}</h2>
+              <p>{{blog.description}}</p>
+            </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <script>
+    function goToBlog(url) {
+        window.location.href = url;
+    }
+  </script>
+  {% endblock %}  

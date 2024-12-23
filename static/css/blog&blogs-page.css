@@ -1,0 +1,133 @@
+/* This css file for 'blog.html' and 'blogs.html' */
+
+/* Google font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Blogs Page css */
+
+#blog-page{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#bp{
+    width: 100%;
+}
+
+#bp div:first-of-type{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#bp div .blog-post{
+    width: 25.01%;
+    height: 330px;
+    background-color: rgb(30, 39, 61);
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+
+.blog-post{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: "Poppins", serif;
+    font-style: normal;
+    cursor: pointer;
+    padding: 8px 0px;
+    justify-content: space-evenly;
+}
+
+.blog-post img{
+    width: 90%;
+    align-self: center;
+    border-radius: 5px;
+}
+
+.blog-post h2{
+    font-weight: 500;
+    margin: 0px 10px;
+}
+
+.blog-post p{
+    margin: 0px 10px;
+}
+
+@media (max-width: 1024px){
+
+    #bp div:first-of-type{
+        flex-wrap: wrap;
+        row-gap: 40px;
+        justify-content: space-evenly;
+    }
+
+    #bp div .blog-post{
+        width: 35%;
+        gap: 0;
+        flex-wrap: nowrap;
+        margin-bottom: 0;
+        padding: 5px 0px;
+    }
+    
+    #blog-5, #blog-6{
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
+    #bp div .blog-post{
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px){
+    #bp div:first-of-type{
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+
+    #bp div .blog-post{
+        width: 70%;
+    }
+
+    #blog-4, #blog-5, #blog-6{
+        display: none;
+    }
+}
+
+
+@media (max-width: 400px){
+    #bp div:first-of-type{
+        flex-direction: column;
+    }
+
+    #bp div .blog-post{
+        width: 83%;
+    }
+}
+
+@media (max-width:340px){
+    #bp div .blog-post{
+        padding: 5px 0;
+    }
+}
+
+#searched{
+    margin-top: 20px;
+    margin-left: 20px;
+    color: white;
+}
+
+#searched span{
+    color: #9333EA;
+}

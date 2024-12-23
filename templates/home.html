@@ -12,8 +12,8 @@
       commitment to staying updated with the latest trends and technologies.
     </p>
     <div id="hmcb">
-    <a href="" class="hmc-button">Free Courses</a>
-    <a href="" class="hmc-button">Explore Blog</a>
+    <a onclick="searchMenu()"class="hmc-button">Search Blog</a>
+    <a href="http://127.0.0.1:8000/blogs/" class="hmc-button">Explore Blog</a>
     </div>
   </div>
 </div>
@@ -23,6 +23,9 @@
 <div id="home-blog-section">
   <div id="hbs">
     <h1>Our Latest Blogs</h1>
+    {% if blogs|length == 0 %}
+    <p id="no-blogs">No blogs found.</p>
+    {% else %}
     <div id="blog-container">
       {% for blog in blogs %}
           <div class="blog-post" onclick="goToBlog('http://127.0.0.1:8000/{{blog.slug}}/')">
@@ -32,6 +35,7 @@
           </div>
       {% endfor %}
     </div>
+    {% endif %}
   </div>
 </div>
 

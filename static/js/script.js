@@ -9,3 +9,16 @@ function toggleMenu(){
         menulist.style.maxHeight = "0px";
     }
 }
+
+function searchMenu(){
+    var search = document.getElementById("search-container");
+    if (search.style.display == "flex"){
+        search.style.display = "none";
+    }
+    else{
+        search.style.display = "flex";
+        if (menulist.style.maxHeight=="310px"){
+            menulist.style.maxHeight = "0px";
+        }
+    }
+}
