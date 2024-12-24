@@ -33,6 +33,7 @@ header{
     font-family: "Poppins", serif;
     font-weight: 600;
     font-style: normal;
+    cursor: pointer;
 }
 
 #navbar{
@@ -363,7 +364,7 @@ footer div p{
 #search-container{
     position: fixed;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     /* display: flex; */
     display: none;
     justify-content: center;
@@ -408,7 +409,7 @@ footer div p{
     background-color: #9333EA;
     color: white;
     border: none;
-    padding: 7px 10px;
+    padding: 12px 15px;
     border-radius: 5px;
     width: fit-content;
     cursor: pointer;
@@ -422,9 +423,15 @@ footer div p{
     align-items: center;
 }
 
+@media (max-width:600px){
+    #search-form{
+        width: 90%;
+    }
+}
+
 @media (max-width: 270px){
     #search-form{
-        width: 90vw;
+        width: 90%;
     }
     #search-form form input{
         width: 80%;

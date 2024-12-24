@@ -13,7 +13,7 @@ class Category(models.Model):
 class BlogPost(models.Model):
     title = models.CharField(max_length=45)
     description = models.TextField(max_length=70, default="No Description")
-    category = models.ManyToManyField(Category, related_name="blogs")
+    category = models.ForeignKey(Category, null=True, blank=False, on_delete=models.SET_NULL,)
     slug = models.CharField(unique=True, null=False, blank=False, max_length=150)
     dateandtime = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(upload_to='images/', null=False, blank=False)

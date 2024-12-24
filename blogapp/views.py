@@ -1,9 +1,11 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 from .models import BlogPost
 
 def home(request):
     blogs = BlogPost.objects.order_by('-dateandtime')[:4]
-    context={"page_title":"BLOG APP USING DJANGO", "blogs":blogs}
+    for blog in blogs:
+        print(blog.dateandtime.date())
+        context={"page_title":"BLOG APP USING DJANGO", "blogs":blogs}
     return render(request, 'home.html', context)
 
 def blogspage(request):
@@ -18,4 +20,6 @@ def blogspage(request):
 
 def blog(request, slug):
     blog = BlogPost.objects.get(slug=slug)
-    return HttpResponse(blog.title)
+    print(blog.category)
+    context={"page_title":blog.title, "blog":blog}
+    return render(request, 'blog.html', context)
