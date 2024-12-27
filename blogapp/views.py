@@ -14,7 +14,7 @@ def blogspage(request):
     query = request.GET.get('q')
     if query:
         blogs = BlogPost.objects.filter(title__icontains=query)
-        context={"page_title":"ALL BLOGS", "blogs":blogs, "searched":query, "css_file":"css/blog&blogs-page.css"}
+        context={"page_title":"ALL BLOGS", "blogs":blogs, "searched":query, "css_file":"css/blogs.css"}
         return render(request, 'blogs.html', context)
     blogs = BlogPost.objects.order_by('-dateandtime')
     context={"page_title":"ALL BLOGS", "blogs":blogs, "searched":query, "css_file":"css/blogs.css"}
