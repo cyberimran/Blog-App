@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('blogs/', blogspage, name='blogspage'),
+    path('about/', about, name='about'),
     path('<slug:slug>/', blog, name='blog'),
 ]
 

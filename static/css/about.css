@@ -1,0 +1,47 @@
+#about-page{
+    margin: 20px 0px;
+    display: flex;
+    width: 100%;
+    justify-content: center; 
+    height: fit-content;
+}
+
+#container{
+    width: 50%;
+    height: fit-content;
+    background-color: #1F2937;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    border-radius: 20px;
+}
+
+#about-content p{
+    color: white;
+    margin-top: 10px;
+}
+
+#about-content a{
+    color: #cebbdf;
+    text-decoration: none;
+}
+
+#about-content  h1{
+    color: white;
+}
+
+@media (max-width:1024px){
+    #container{
+        width: 65%;
+    }
+}
+
+@media (max-width:768px){
+    #container{
+        width: 80%;
+    }
+}

@@ -1,104 +1,6 @@
-/* This css file for 'base.html' and 'home.html' */
+/* This css file for 'home.html' */
 
-/* Google font */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    width: 100%;
-    background-color: #111827;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh
-}
-
-/* Header Css */
-
-header{
-    background-color: #1F2937;
-    height: 70px;
-    border-bottom: 2px solid rgb(116, 105, 85);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-#navbar #logo h1{
-    color: white;
-    font-family: "Poppins", serif;
-    font-weight: 600;
-    font-style: normal;
-    cursor: pointer;
-}
-
-#navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    height: 100%;
-    padding: 0px 30px;
-    text-align: center;
-}
-
-#navbar ul{
-    display: flex;
-    gap: 30px;
-    align-items: center;
-}
-
-#navbar ul li{
-    list-style-type: none;
-}
-
-#navbar ul li a, #menu-icon svg, #navbar ul li{
-    text-decoration: none;
-    color: white;
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-style: normal;
-    cursor: pointer;
-}
-
-#navbar ul li:hover{
-    text-decoration: underline;
-    text-underline-offset: 5px;
-    text-decoration-color: #9333EA;
-    padding-bottom: 2px;
-}
-
-#menu-icon{
-    display: none;
-}
-
-@media (max-width:900px){
-    #navbar ul{
-        gap: 10px;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        text-align: center;
-        background-color: #1F2937;
-        overflow: hidden;
-        border-bottom: 2px solid rgb(116, 105, 85);
-    }
-    #navbar ul li:last-of-type{
-        padding-bottom: 10px;
-    }
-    #menu-icon{
-        display: block;
-    }
-    #menu-list{
-        transition: all 0.5s;
-    }
-}
 
 /* Home Page Main Content Css */
 
@@ -222,7 +124,7 @@ header{
     height: 330px;
     background-color: rgb(30, 39, 61);
     border-radius: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 
@@ -289,7 +191,7 @@ header{
 }
 
 @media (max-width: 600px){
-    #hbs div:first-of-type{
+    #hbs #blog-container{
         flex-direction: column;
         margin-bottom: 40px;
     }
@@ -321,119 +223,3 @@ header{
     }
 }
 
-/* Footer */
-
-footer{
-    margin-top: auto;
-    background-color: #1F2937;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 75px;
-}
-
-footer div{
-    color: #E5E7EB;
-    width: 100%;
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-footer div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-footer div p{
-    color: #d4d4d4;
-    font-weight: 500;
-}
-
-@media (max-width:500px){
-    footer div{
-        padding: 0px 15px;
-        text-align: center;
-        font-size: 15px;
-    }
-}
-
-/* Search Button Css */
-
-#search-container{
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    /* display: flex; */
-    display: none;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-#search-form{
-    display: flex;
-    align-items: center;
-    width: 250px;
-    height: 150px;
-    justify-content: center;
-    flex-direction: column;
-    border: 2px solid #9333EA;
-    position: fixed;
-    background-color: #1F2937;
-    opacity: 1;
-    border-radius: 5px;
-}
-
-#search-form svg{
-    fill: #e6e7ea;
-    color: #efe8e8;
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    cursor: pointer;
-}
-
-#search-form form input{
-    border: 2px solid #9333EA;
-    padding: 10px 5px;
-    font-size: large;
-    border-radius: 5px;
-    margin-top: 15px;
-}
-
-#search-form form button{
-    background-color: #9333EA;
-    color: white;
-    border: none;
-    padding: 12px 15px;
-    border-radius: 5px;
-    width: fit-content;
-    cursor: pointer;
-}
-
-#search-form form{
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (max-width:600px){
-    #search-form{
-        width: 90%;
-    }
-}
-
-@media (max-width: 270px){
-    #search-form{
-        width: 90%;
-    }
-    #search-form form input{
-        width: 80%;
-    }
-}
