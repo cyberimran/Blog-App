@@ -30,3 +30,9 @@ def blog(request, slug):
 def about(request):
     context={"page_title":"About - CYBER IMRAN", "css_file":"css/about.css"}
     return render(request, 'about.html', context)
+
+#Contact Page
+def contact(request):
+    context={"page_title":"Contact - CYBER IMRAN", "css_file":"css/contact.css"}
+    return render(request, 'contact.html', context)
+    
