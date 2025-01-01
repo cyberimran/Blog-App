@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %}
+
+<div id="login-page">
+    <div id="login-section">
+        <div id="login-content">
+            <h2>Login now</h2>
+            <form method="post">
+                {% csrf_token %}
+                {% if messages %}
+                {% for message in messages %}
+                <ul class="messages"><li>{{message}}</li></ul>
+                {% endfor %}
+                {% endif %}
+                <input type="email" name="email" class="input" id="email" placeholder="Enter your email" autocomplete="off" spellcheck="false">
+                <input type="password" name="password" class="input" id="password" placeholder="Enter your password" autocomplete="off" spellcheck="false">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

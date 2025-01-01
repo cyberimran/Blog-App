@@ -26,6 +26,8 @@ urlpatterns = [
     path('blogs/', blogspage, name='blogspage'),
     path('about/', about, name='about'),
     path('contact/', contact, name='contact'),
+    path('register/', register, name='register'),
+    path('login/', login, name='login'),
     path('<slug:slug>/', blog, name='blog'),
 ]
 
