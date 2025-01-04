@@ -28,6 +28,7 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('register/', register, name='register'),
     path('login/', login, name='login'),
+    path('dashboard/', dashboard, name='dashboard'),
     path('<slug:slug>/', blog, name='blog'),
 ]
 

@@ -78,3 +78,8 @@ def login(request):
             messages.add_message(request, messages.INFO, "Invalid credentials.")
     context={"page_title":"Login - CYBER IMRAN", "css_file":"css/login.css"}
     return render(request, 'login.html', context)
+
+#User Dashboard Page
+def dashboard(request):
+    context = {"page_title":"Dashboard - CYBER IMRAN", "css_file":"css/dashboard.css"}
+    return render(request, 'dashboard.html', context)

@@ -1,0 +1,119 @@
+#dashboard-nav {
+    position: fixed;
+    top: 71.6px;
+    width: 100vw;
+    height: 40px;
+    background-color: #1f2937;
+    display: flex;
+    justify-content: center;
+}
+
+#d-nav {
+    width: 90% !important;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#dashboard-nav #d-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    justify-content: end;
+}
+
+#d-nav p {
+    color: white;
+    font-family: "Poppins", serif;
+    font-style: normal;
+}
+
+#d-nav p b {
+    color: #9333EA;
+}
+
+#d-nav p span {
+    font-size: 20px;
+}
+
+#dashboard-nav #d-nav ul li a {
+    color: #9333EA;
+    text-decoration: none;
+    font-family: "Poppins", serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.dropbtn svg {
+    margin-top: 6px;
+}
+
+.dropbtn {
+    background-color: #1f2937;
+    color: #9333EA;
+    font-family: "Poppins", serif;
+    font-style: normal;
+    font-size: 16px;
+    border: none;
+    display: flex;
+}
+
+.dropbtn p {
+    color: #9333EA !important;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: none;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1f2937;
+    border: 2px solid #9333EA;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #9333EA;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: "Poppins", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.dropdown-content a:hover {
+    color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media (max-width:900px) {
+    .dropdown {
+        display: inline-block;
+        justify-self: end;
+    }
+
+    #dashboard-nav #d-nav ul {
+        display: none !important;
+    }
+}
+
+@media (max-width:450px){
+    #d-nav p b{
+        display: none;
+    }
+}
