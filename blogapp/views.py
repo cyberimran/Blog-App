@@ -5,7 +5,7 @@ from django.contrib import messages
 
 #Home Page
 def home(request):
-    blogs = BlogPost.objects.order_by('-dateandtime')[:4]
+    blogs = BlogPost.objects.filter(premium=False).order_by('-dateandtime')[:6]
     for blog in blogs:
         print(blog.dateandtime.date())
         context={"page_title":"BLOG APP USING DJANGO", "blogs":blogs, "css_file":"css/style.css"}

@@ -17,6 +17,7 @@ class BlogPost(models.Model):
     slug = models.CharField(unique=True, null=False, blank=False, max_length=150)
     dateandtime = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(upload_to='images/', null=False, blank=False)
+    premium = models.BooleanField(default=False)
     content = RichTextField()
 
     def __str__(self):
